@@ -1,3 +1,3 @@
-var posts=["posts/16107/","posts/20572/"];function toRandomPost(){
-    window.location.href='/'+posts[Math.floor(Math.random() * posts.length)];
+var posts=["posts/20572/","posts/16107/"];function toRandomPost(){
+    pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);
   };
