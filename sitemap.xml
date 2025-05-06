@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://syjx.dpdns.org/posts/52166/</loc>
+    
+    <lastmod>2025-05-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://syjx.dpdns.org/google8922b47278f30c7d.html</loc>
     
     <lastmod>2025-05-04</lastmod>
@@ -12,15 +21,6 @@
   
   <url>
     <loc>https://syjx.dpdns.org/posts/20572/</loc>
-    
-    <lastmod>2025-05-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://syjx.dpdns.org/posts/52166/</loc>
     
     <lastmod>2025-05-02</lastmod>
     
@@ -83,69 +83,6 @@
   </url>
   
   <url>
-    <loc>https://syjx.dpdns.org/gallery/index.html</loc>
-    
-    <lastmod>2025-04-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://syjx.dpdns.org/gallery/taikong.html</loc>
-    
-    <lastmod>2025-04-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://syjx.dpdns.org/gallery/zdj.html</loc>
-    
-    <lastmod>2025-04-23</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://syjx.dpdns.org/gallery/xhr.html</loc>
-    
-    <lastmod>2025-04-23</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://syjx.dpdns.org/gallery/gg.html</loc>
-    
-    <lastmod>2025-04-23</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://syjx.dpdns.org/gallery/fj.html</loc>
-    
-    <lastmod>2025-04-23</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://syjx.dpdns.org/gallery/index.html</loc>
-    
-    <lastmod>2025-04-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://syjx.dpdns.org/image/index.html</loc>
     
     <lastmod>2025-04-19</lastmod>
@@ -202,7 +139,7 @@
 
   <url>
     <loc>https://syjx.dpdns.org/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -210,42 +147,42 @@
   
   <url>
     <loc>https://syjx.dpdns.org/tags/Cloudflare/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://syjx.dpdns.org/tags/CF/</loc>
-    <lastmod>2025-05-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://syjx.dpdns.org/tags/R2/</loc>
-    <lastmod>2025-05-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://syjx.dpdns.org/tags/%E5%85%8D%E9%93%B6%E8%A1%8C%E5%8D%A1/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://syjx.dpdns.org/tags/%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://syjx.dpdns.org/tags/DigitalPlat/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://syjx.dpdns.org/tags/R2/</loc>
+    <lastmod>2025-05-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://syjx.dpdns.org/tags/%E5%85%8D%E9%93%B6%E8%A1%8C%E5%8D%A1/</loc>
+    <lastmod>2025-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -254,7 +191,7 @@
   
   <url>
     <loc>https://syjx.dpdns.org/categories/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

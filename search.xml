@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hello World!</title>
+    <url>/posts/16107/</url>
+    <content><![CDATA[<h2 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World!"></a>Hello World!</h2>]]></content>
+  </entry>
+  <entry>
+    <title>DigitalPlat免费域名注册，可以托管至Cloudflare</title>
+    <url>/posts/52166/</url>
+    <content><![CDATA[<h2 id="0-序"><a href="#0-序" class="headerlink" title="0. 序"></a>0. 序</h2><p>由于DigitalPlat现在只能使用Github进行KYC验证，所以请准备一个Github账号，如果没有请自行<a href="https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=/&source=header-home">注册Github账号</a>，注册很简单。<br>在申请成功域名之后，可以将域名托管至Cloudflare，所以也请准备一个Cloudflare账号，如果没有请自行<a href="https://www.cloudflare.com/zh-cn/">注册Cloudflare账户</a>，注册很简单。</p>
+<h2 id="1-申请域名"><a href="#1-申请域名" class="headerlink" title="1. 申请域名"></a>1. 申请域名</h2><h3 id="1-1-注册DigitalPlat"><a href="#1-1-注册DigitalPlat" class="headerlink" title="1.1 注册DigitalPlat"></a>1.1 注册DigitalPlat</h3><p>打开<a href="https://dash.domain.digitalplat.org/auth/register">DigitalPlat注册网址</a>，可以看到需要填写的内容，在E-Mial处能够看到所支持的邮箱类型，地址填写可以使用生成的地址（<a href="https://ratenn.com/american.html">地址生成器</a>），其余内容按照要求格式填写即可。</p>
+<p><img src="https://syimg.dpdns.org/myimg/770a86.png" alt="注册信息填写名字"></p>
+<p><img src="https://syimg.dpdns.org/myimg/3cbdd8.png" alt="注册信息填写电话地址"></p>
+<p>确认之后，会收到验证邮箱的邮件，复制链接到浏览器的最上边的搜索框，回车，出现Successful界面即为邮箱验证成功。</p>
+<h3 id="1-2-KYC验证"><a href="#1-2-KYC验证" class="headerlink" title="1.2 KYC验证"></a>1.2 KYC验证</h3><p>进入<a href="https://dash.domain.digitalplat.org/auth/login?next=/panel/main?page=/panel/overview">DigitalPlat登录主页</a>，输入注册好的账号进行登录，会出现KYC验证界面，选择GitHub OAuth并登录Github验证，点击授权，出现Successful界面即为KYC验证成功。</p>
+<p><img src="https://syimg.dpdns.org/myimg/effb6e.png" alt="KYC验证界面"></p>
+<p><img src="https://syimg.dpdns.org/myimg/6308f5.png" alt="GitHubKYC验证"></p>
+<p><img src="https://syimg.dpdns.org/myimg/d4571c.png" alt="KYC成功界面"></p>
+<h3 id="1-3-增加额度"><a href="#1-3-增加额度" class="headerlink" title="1.3 增加额度"></a>1.3 增加额度</h3><p>进入<a href="https://dash.domain.digitalplat.org/auth/login?next=/panel/main?page=/panel/overview">DigitalPlat登录主页</a>，可以看到已经自动登录，如果没有，登录即可，默认只有1个域名额度。</p>
+<p><img src="https://syimg.dpdns.org/myimg/7ceab4.png" alt="1个额度"></p>
+<p>请点击第3个蓝方框的手指指向的链接跳转至Github，点击Star，可以增加一个额度。</p>
+<p><img src="https://syimg.dpdns.org/myimg/b6f369.png" alt="步骤1"></p>
+<p><img src="https://syimg.dpdns.org/myimg/72d667.png" alt="步骤2"></p>
+<p><img src="https://syimg.dpdns.org/myimg/a73514.png" alt="步骤3"></p>
+<p><img src="https://syimg.dpdns.org/myimg/ddca87.png" alt="步骤4"></p>
+<p><img src="https://syimg.dpdns.org/myimg/a009b7.png" alt="2个额度"></p>
+<h3 id="1-4-申请域名"><a href="#1-4-申请域名" class="headerlink" title="1.4 申请域名"></a>1.4 申请域名</h3><p>登录DigitalPlat，点击左侧的Domain Registration，选择.dpdns.org后缀（.us.kg开始收费），填写Domain name，检查是否可用，如果可用会出现下图，恭喜申请成功。</p>
+<p><img src="https://syimg.dpdns.org/myimg/056851.png" alt="申请域名"></p>
+<p><img src="https://syimg.dpdns.org/myimg/c7fc9c.png" alt="申请成功"></p>
+<h2 id="2-托管至Cloudflare"><a href="#2-托管至Cloudflare" class="headerlink" title="2. 托管至Cloudflare"></a>2. 托管至Cloudflare</h2><p>登录<a href="https://www.cloudflare.com/zh-cn/">Cloudflare</a>，进入账户主页，将申请的域名填写进去，点击继续；  </p>
+<p><img src="https://syimg.dpdns.org/myimg/473e24.png" alt="域名填写"></p>
+<p>选择Free计划；  </p>
+<p>点击继续前往激活，弹出窗口并点击确认；  </p>
+<p>将提供的名称服务器分别填写到DigitalPlat域名中的NS1、NS2（在My Domains中点击域名之后可以看到），并点击Register，回到Cloudflare点击继续；  </p>
+<p><img src="https://syimg.dpdns.org/myimg/c12c66.png" alt="NS填写"></p>
+<p>回到Cloudflare可以看到，过一段时间域名状态为活动，托管成功。</p>
+<p><img src="https://syimg.dpdns.org/myimg/0bca24.png" alt="托管成功"></p>
+<h2 id="3-域名续订"><a href="#3-域名续订" class="headerlink" title="3. 域名续订"></a>3. 域名续订</h2><p>回到DigitalPlat，点击左侧的My Domains，随后点击你的域名，进入管理界面，点击Renew，可以看到在域名到期前的180天内点击续订，即可继续使用，之后重复即可。</p>
+<p><img src="https://syimg.dpdns.org/myimg/0d77dd.png" alt="域名续订"></p>
+<h2 id="4-域名使用"><a href="#4-域名使用" class="headerlink" title="4. 域名使用"></a>4. 域名使用</h2><p>如果你有什么项目，则可以使用使用此域名，并在Cloudflare解析。</p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Cloudflare</tag>
+        <tag>CF</tag>
+        <tag>免费域名</tag>
+        <tag>DigitalPlat</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>免银行卡添加Cloudflare付款方式</title>
+    <url>/posts/20572/</url>
+    <content><![CDATA[<h2 id="0-序"><a href="#0-序" class="headerlink" title="0. 序"></a>0. 序</h2><p>如果没有Cloudflare账号，请自行<a href="https://www.cloudflare.com/zh-cn/">注册Cloudflare账户</a>，注册很简单。</p>
+<h2 id="1-起因"><a href="#1-起因" class="headerlink" title="1. 起因"></a>1. 起因</h2><p>起因是博主想搭建一个图床，搜索一番后采用的是Github + Picgo，但是Github有容量限制。 随后，又了解到Cloudflare R2存储桶的免费容量较多，决定采用R2存储桶，确定以后就开始动手，然后发现需要添加付款方式，由于没有外币银行卡就又搜索一番找到了免信用卡添加付款的方法。</p>
+<p>原教程：NodeSeek：<a href="https://www.nodeseek.com/post-84328-1">【教程】免信用卡为cloudflare添加付款方式</a>，zk的思想创意收集馆：<a href="https://www.zkcoi.com/idea/skills/3452.html">【教程】免信用卡为cloudflare添加付款方式</a></p>
+<h2 id="2-原理"><a href="#2-原理" class="headerlink" title="2. 原理"></a>2. 原理</h2><p>一部分网站的支付网关在初步验证信用卡信息时<strong>仅检查卡号的格式是否符合标准</strong>（如Luhn算法）以及卡种、发卡行等基本信息，<strong>而不进行实际的资金预授权或小额扣款验证</strong>。也就是说，<strong>在绑定信用卡时，这些网站可能只进行基本的格式检查，而不与银行或信用卡网络进行实时验证来确认卡号的真实性和有效性</strong>。这意味着，<strong>只要卡号格式正确，就可能可以通过验证</strong>。</p>
+<p>然而，这并不意味着可以使用这些随机生成的信用卡信息进行实际消费或支付，因为在进行交易时，支付系统会进行更深入的验证，包括资金的实际可用性和账户的有效性。因此，<strong>当一些网站采用更严格的验证措施，如要求验证卡的有效性或进行小额扣款验证时，这时随机生成的信用卡信息就无法通过验证</strong>。</p>
+<h2 id="3-步骤"><a href="#3-步骤" class="headerlink" title="3. 步骤"></a>3. 步骤</h2><h3 id="3-1-点击Cloudflare右上角账户：账单—-付款"><a href="#3-1-点击Cloudflare右上角账户：账单—-付款" class="headerlink" title="3.1 点击Cloudflare右上角账户：账单—&gt;付款"></a>3.1 点击Cloudflare右上角账户：账单—&gt;付款</h3><h3 id="3-2-卡号生成"><a href="#3-2-卡号生成" class="headerlink" title="3.2 卡号生成"></a>3.2 卡号生成</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">601121255660xxxx</span><br><span class="line">622759531087xxxx</span><br><span class="line">546775142533xxxx</span><br><span class="line">479229938031xxxx</span><br></pre></td></tr></table></figure>
+
+<p>上面是一些卡段，打开信息生成网站：<a href="https://namso-gen.com/?tab=basic&network=random">namso-gen</a>，选择一个卡段输入到BIN中，数量可以设置为100（自己选择），点击Generate生成信息，点击Copy复制信息。</p>
+<p><img src="https://syimg.dpdns.org/myimg/68e292.png" alt="卡号生成"></p>
+<h3 id="3-3-卡号验证"><a href="#3-3-卡号验证" class="headerlink" title="3.3 卡号验证"></a>3.3 卡号验证</h3><p>打开信息验证网站：<a href="https://chkr.cc/">CC Checker</a>，将Copy的信息粘贴至框中，并点击开始（数量多，时间慢），Live表示可用，选择任意一个即可。</p>
+<p><img src="https://syimg.dpdns.org/myimg/afe5d9.png" alt="卡号验证"></p>
+<h3 id="3-4-卡号填写"><a href="#3-4-卡号填写" class="headerlink" title="3.4 卡号填写"></a>3.4 卡号填写</h3><p>回到Cloudflare付款界面，填写相关信息，选择一个验证通过的信息填写（卡号——月&#x2F;年——CVC），地区选择美国。</p>
+<p><img src="https://syimg.dpdns.org/myimg/48a8e4.png" alt="卡号填写"></p>
+<h3 id="3-5-地址填写"><a href="#3-5-地址填写" class="headerlink" title="3.5 地址填写"></a>3.5 地址填写</h3><p>打开美国地址生成网站：<a href="https://usaddressgen.com/">美国地址生成器</a>（也可以自己找），对应填写即可。</p>
+<p><img src="https://syimg.dpdns.org/myimg/089632.png" alt="地址填写"></p>
+<h3 id="3-6-确认成功"><a href="#3-6-确认成功" class="headerlink" title="3.6 确认成功"></a>3.6 确认成功</h3><p>填写完成之后，点击确认。</p>
+<p><img src="https://syimg.dpdns.org/myimg/d665a2.png" alt="确认"></p>
+<p>确认之后，如果出现下图，即为成功。</p>
+<p><img src="https://syimg.dpdns.org/myimg/993534.png" alt="成功"></p>
+<h3 id="3-7-失败处理"><a href="#3-7-失败处理" class="headerlink" title="3.7 失败处理"></a>3.7 失败处理</h3><p>如果不能通过，请切换卡号再次尝试。</p>
+<h2 id="4-声明"><a href="#4-声明" class="headerlink" title="4. 声明"></a>4. 声明</h2><p><strong>此教程仅供学习交流。</strong></p>
+<p><strong>在某种意义上，尝试使用随机生成的信用卡信息进行绑定或交易属于非法行为，可能会导致法律后果，包括被网站禁止、面临欺诈指控等。因此如非必要，即便在技术上可能存在这样的漏洞，也强烈建议遵守法律和道德规范，不要尝试使用非法手段进行操作。</strong></p>
+<p><strong>在某种意义上，尝试使用随机生成的信用卡信息进行绑定或交易属于非法行为，可能会导致法律后果，包括被网站禁止、面临欺诈指控等。因此如非必要，即便在技术上可能存在这样的漏洞，也强烈建议遵守法律和道德规范，不要尝试使用非法手段进行操作。</strong></p>
+<p><strong>在某种意义上，尝试使用随机生成的信用卡信息进行绑定或交易属于非法行为，可能会导致法律后果，包括被网站禁止、面临欺诈指控等。因此如非必要，即便在技术上可能存在这样的漏洞，也强烈建议遵守法律和道德规范，不要尝试使用非法手段进行操作。</strong></p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Cloudflare</tag>
+        <tag>CF</tag>
+        <tag>R2</tag>
+        <tag>免银行卡</tag>
+      </tags>
+  </entry>
+</search>
