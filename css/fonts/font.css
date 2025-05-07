@@ -1,5 +1,12 @@
-@font-face {
-    font-family: 'LXGWZhenKai_Regular';
-    font-display: swap;
-    src: url('LXGW/LXGWZhenKai_Regular.ttf') format('truetype');
+/*@font-face {*/
+/*    font-family: 'LXGWZhenKai_Regular';*/
+/*    font-display: swap;*/
+/*    src: url('LXGW/LXGWZhenKai_Regular.ttf') format('truetype');*/
+/*}*/
+
+/* Screen version */
+@import 'lxgw-wenkai-screen-webfont/style.css';
+body {
+    /* Screen version */
+    font-family: "LXGW WenKai Screen", sans-serif;
 }

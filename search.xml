@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World!</title>
-    <url>/posts/16107/</url>
-    <content><![CDATA[<h2 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World!"></a>Hello World!</h2>]]></content>
-  </entry>
-  <entry>
     <title>DigitalPlat免费域名注册，可以托管至Cloudflare</title>
     <url>/posts/52166/</url>
     <content><![CDATA[<h2 id="0-序"><a href="#0-序" class="headerlink" title="0. 序"></a>0. 序</h2><p>由于DigitalPlat现在只能使用Github进行KYC验证，所以请准备一个Github账号，如果没有请自行<a href="https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=/&source=header-home">注册Github账号</a>，注册很简单。<br>在申请成功域名之后，可以将域名托管至Cloudflare，所以也请准备一个Cloudflare账号，如果没有请自行<a href="https://www.cloudflare.com/zh-cn/">注册Cloudflare账户</a>，注册很简单。</p>
@@ -49,6 +44,11 @@
         <tag>免费域名</tag>
         <tag>DigitalPlat</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Hello World!</title>
+    <url>/posts/16107/</url>
+    <content><![CDATA[<h2 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World!"></a>Hello World!</h2>]]></content>
   </entry>
   <entry>
     <title>免银行卡添加Cloudflare付款方式</title>
