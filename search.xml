@@ -1,49 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World!</title>
-    <url>/posts/16107/</url>
-    <content><![CDATA[<h2 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World!"></a>Hello World!</h2>]]></content>
-  </entry>
-  <entry>
-    <title>免银行卡添加Cloudflare付款方式</title>
-    <url>/posts/20572/</url>
-    <content><![CDATA[<h2 id="0-序"><a href="#0-序" class="headerlink" title="0. 序"></a>0. 序</h2><p>如果没有Cloudflare账号，请自行<a href="https://www.cloudflare.com/zh-cn/">注册Cloudflare账户</a>，注册很简单。</p>
-<h2 id="1-起因"><a href="#1-起因" class="headerlink" title="1. 起因"></a>1. 起因</h2><p>起因是博主想搭建一个图床，搜索一番后采用的是Github + Picgo，但是Github有容量限制。 随后，又了解到Cloudflare R2存储桶的免费容量较多，决定采用R2存储桶，确定以后就开始动手，然后发现需要添加付款方式，由于没有外币银行卡就又搜索一番找到了免信用卡添加付款的方法。</p>
-<p>原教程：NodeSeek：<a href="https://www.nodeseek.com/post-84328-1">【教程】免信用卡为cloudflare添加付款方式</a>，zk的思想创意收集馆：<a href="https://www.zkcoi.com/idea/skills/3452.html">【教程】免信用卡为cloudflare添加付款方式</a></p>
-<h2 id="2-原理"><a href="#2-原理" class="headerlink" title="2. 原理"></a>2. 原理</h2><p>一部分网站的支付网关在初步验证信用卡信息时<strong>仅检查卡号的格式是否符合标准</strong>（如Luhn算法）以及卡种、发卡行等基本信息，<strong>而不进行实际的资金预授权或小额扣款验证</strong>。也就是说，<strong>在绑定信用卡时，这些网站可能只进行基本的格式检查，而不与银行或信用卡网络进行实时验证来确认卡号的真实性和有效性</strong>。这意味着，<strong>只要卡号格式正确，就可能可以通过验证</strong>。</p>
-<p>然而，这并不意味着可以使用这些随机生成的信用卡信息进行实际消费或支付，因为在进行交易时，支付系统会进行更深入的验证，包括资金的实际可用性和账户的有效性。因此，<strong>当一些网站采用更严格的验证措施，如要求验证卡的有效性或进行小额扣款验证时，这时随机生成的信用卡信息就无法通过验证</strong>。</p>
-<h2 id="3-步骤"><a href="#3-步骤" class="headerlink" title="3. 步骤"></a>3. 步骤</h2><h3 id="3-1-点击Cloudflare右上角账户：账单—-付款"><a href="#3-1-点击Cloudflare右上角账户：账单—-付款" class="headerlink" title="3.1 点击Cloudflare右上角账户：账单—&gt;付款"></a>3.1 点击Cloudflare右上角账户：账单—&gt;付款</h3><h3 id="3-2-卡号生成"><a href="#3-2-卡号生成" class="headerlink" title="3.2 卡号生成"></a>3.2 卡号生成</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">601121255660xxxx</span><br><span class="line">622759531087xxxx</span><br><span class="line">546775142533xxxx</span><br><span class="line">479229938031xxxx</span><br></pre></td></tr></table></figure>
-
-<p>上面是一些卡段，打开信息生成网站：<a href="https://namso-gen.com/?tab=basic&network=random">namso-gen</a>，选择一个卡段输入到BIN中，数量可以设置为100（自己选择），点击Generate生成信息，点击Copy复制信息。</p>
-<p><img src="https://syimg.dpdns.org/myimg/68e292.png" alt="卡号生成"></p>
-<h3 id="3-3-卡号验证"><a href="#3-3-卡号验证" class="headerlink" title="3.3 卡号验证"></a>3.3 卡号验证</h3><p>打开信息验证网站：<a href="https://chkr.cc/">CC Checker</a>，将Copy的信息粘贴至框中，并点击开始（数量多，时间慢），Live表示可用，选择任意一个即可。</p>
-<p><img src="https://syimg.dpdns.org/myimg/afe5d9.png" alt="卡号验证"></p>
-<h3 id="3-4-卡号填写"><a href="#3-4-卡号填写" class="headerlink" title="3.4 卡号填写"></a>3.4 卡号填写</h3><p>回到Cloudflare付款界面，填写相关信息，选择一个验证通过的信息填写（卡号——月&#x2F;年——CVC），地区选择美国。</p>
-<p><img src="https://syimg.dpdns.org/myimg/48a8e4.png" alt="卡号填写"></p>
-<h3 id="3-5-地址填写"><a href="#3-5-地址填写" class="headerlink" title="3.5 地址填写"></a>3.5 地址填写</h3><p>打开美国地址生成网站：<a href="https://usaddressgen.com/">美国地址生成器</a>（也可以自己找），对应填写即可。</p>
-<p><img src="https://syimg.dpdns.org/myimg/089632.png" alt="地址填写"></p>
-<h3 id="3-6-确认成功"><a href="#3-6-确认成功" class="headerlink" title="3.6 确认成功"></a>3.6 确认成功</h3><p>填写完成之后，点击确认。</p>
-<p><img src="https://syimg.dpdns.org/myimg/d665a2.png" alt="确认"></p>
-<p>确认之后，如果出现下图，即为成功。</p>
-<p><img src="https://syimg.dpdns.org/myimg/993534.png" alt="成功"></p>
-<h3 id="3-7-失败处理"><a href="#3-7-失败处理" class="headerlink" title="3.7 失败处理"></a>3.7 失败处理</h3><p>如果不能通过，请切换卡号再次尝试。</p>
-<h2 id="4-声明"><a href="#4-声明" class="headerlink" title="4. 声明"></a>4. 声明</h2><p><strong>此教程仅供学习交流。</strong></p>
-<p><strong>在某种意义上，尝试使用随机生成的信用卡信息进行绑定或交易属于非法行为，可能会导致法律后果，包括被网站禁止、面临欺诈指控等。因此如非必要，即便在技术上可能存在这样的漏洞，也强烈建议遵守法律和道德规范，不要尝试使用非法手段进行操作。</strong></p>
-<p><strong>在某种意义上，尝试使用随机生成的信用卡信息进行绑定或交易属于非法行为，可能会导致法律后果，包括被网站禁止、面临欺诈指控等。因此如非必要，即便在技术上可能存在这样的漏洞，也强烈建议遵守法律和道德规范，不要尝试使用非法手段进行操作。</strong></p>
-<p><strong>在某种意义上，尝试使用随机生成的信用卡信息进行绑定或交易属于非法行为，可能会导致法律后果，包括被网站禁止、面临欺诈指控等。因此如非必要，即便在技术上可能存在这样的漏洞，也强烈建议遵守法律和道德规范，不要尝试使用非法手段进行操作。</strong></p>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>Cloudflare</tag>
-        <tag>CF</tag>
-        <tag>R2</tag>
-        <tag>免银行卡</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>DigitalPlat免费域名注册，可以托管至Cloudflare</title>
     <url>/posts/52166/</url>
     <content><![CDATA[<h2 id="0-序"><a href="#0-序" class="headerlink" title="0. 序"></a>0. 序</h2><p>由于DigitalPlat现在只能使用Github进行KYC验证，所以请准备一个Github账号，如果没有请自行<a href="https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=/&source=header-home">注册Github账号</a>，注册很简单。<br>在申请成功域名之后，可以将域名托管至Cloudflare，所以也请准备一个Cloudflare账号，如果没有请自行<a href="https://www.cloudflare.com/zh-cn/">注册Cloudflare账户</a>，注册很简单。</p>
@@ -89,10 +46,52 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World!</title>
+    <url>/posts/16107/</url>
+    <content><![CDATA[<h2 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World!"></a>Hello World!</h2>]]></content>
+  </entry>
+  <entry>
+    <title>免银行卡添加Cloudflare付款方式</title>
+    <url>/posts/20572/</url>
+    <content><![CDATA[<h2 id="0-序"><a href="#0-序" class="headerlink" title="0. 序"></a>0. 序</h2><p>如果没有Cloudflare账号，请自行<a href="https://www.cloudflare.com/zh-cn/">注册Cloudflare账户</a>，注册很简单。</p>
+<h2 id="1-起因"><a href="#1-起因" class="headerlink" title="1. 起因"></a>1. 起因</h2><p>起因是博主想搭建一个图床，搜索一番后采用的是Github + Picgo，但是Github有容量限制。 随后，又了解到Cloudflare R2存储桶的免费容量较多，决定采用R2存储桶，确定以后就开始动手，然后发现需要添加付款方式，由于没有外币银行卡就又搜索一番找到了免信用卡添加付款的方法。</p>
+<p>原教程：NodeSeek：<a href="https://www.nodeseek.com/post-84328-1">【教程】免信用卡为cloudflare添加付款方式</a>，zk的思想创意收集馆：<a href="https://www.zkcoi.com/idea/skills/3452.html">【教程】免信用卡为cloudflare添加付款方式</a></p>
+<h2 id="2-原理"><a href="#2-原理" class="headerlink" title="2. 原理"></a>2. 原理</h2><p>一部分网站的支付网关在初步验证信用卡信息时<strong>仅检查卡号的格式是否符合标准</strong>（如Luhn算法）以及卡种、发卡行等基本信息，<strong>而不进行实际的资金预授权或小额扣款验证</strong>。也就是说，<strong>在绑定信用卡时，这些网站可能只进行基本的格式检查，而不与银行或信用卡网络进行实时验证来确认卡号的真实性和有效性</strong>。这意味着，<strong>只要卡号格式正确，就可能可以通过验证</strong>。</p>
+<p>然而，这并不意味着可以使用这些随机生成的信用卡信息进行实际消费或支付，因为在进行交易时，支付系统会进行更深入的验证，包括资金的实际可用性和账户的有效性。因此，<strong>当一些网站采用更严格的验证措施，如要求验证卡的有效性或进行小额扣款验证时，这时随机生成的信用卡信息就无法通过验证</strong>。</p>
+<h2 id="3-步骤"><a href="#3-步骤" class="headerlink" title="3. 步骤"></a>3. 步骤</h2><h3 id="3-1-点击Cloudflare右上角账户：账单—-付款"><a href="#3-1-点击Cloudflare右上角账户：账单—-付款" class="headerlink" title="3.1 点击Cloudflare右上角账户：账单—&gt;付款"></a>3.1 点击Cloudflare右上角账户：账单—&gt;付款</h3><h3 id="3-2-卡号生成"><a href="#3-2-卡号生成" class="headerlink" title="3.2 卡号生成"></a>3.2 卡号生成</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">601121255660xxxx</span><br><span class="line">622759531087xxxx</span><br><span class="line">546775142533xxxx</span><br><span class="line">479229938031xxxx</span><br></pre></td></tr></table></figure>
+
+<p>上面是一些卡段，打开信息生成网站：<a href="https://namso-gen.com/?tab=basic&network=random">namso-gen</a>，选择一个卡段输入到BIN中，数量可以设置为100（自己选择），点击Generate生成信息，点击Copy复制信息。</p>
+<p><img src="https://syimg.dpdns.org/myimg/68e292.png" alt="卡号生成"></p>
+<h3 id="3-3-卡号验证"><a href="#3-3-卡号验证" class="headerlink" title="3.3 卡号验证"></a>3.3 卡号验证</h3><p>打开信息验证网站：<a href="https://chkr.cc/">CC Checker</a>，将Copy的信息粘贴至框中，并点击开始（数量多，时间慢），Live表示可用，选择任意一个即可。</p>
+<p><img src="https://syimg.dpdns.org/myimg/afe5d9.png" alt="卡号验证"></p>
+<h3 id="3-4-卡号填写"><a href="#3-4-卡号填写" class="headerlink" title="3.4 卡号填写"></a>3.4 卡号填写</h3><p>回到Cloudflare付款界面，填写相关信息，选择一个验证通过的信息填写（卡号——月&#x2F;年——CVC），地区选择美国。</p>
+<p><img src="https://syimg.dpdns.org/myimg/48a8e4.png" alt="卡号填写"></p>
+<h3 id="3-5-地址填写"><a href="#3-5-地址填写" class="headerlink" title="3.5 地址填写"></a>3.5 地址填写</h3><p>打开美国地址生成网站：<a href="https://usaddressgen.com/">美国地址生成器</a>（也可以自己找），对应填写即可。</p>
+<p><img src="https://syimg.dpdns.org/myimg/089632.png" alt="地址填写"></p>
+<h3 id="3-6-确认成功"><a href="#3-6-确认成功" class="headerlink" title="3.6 确认成功"></a>3.6 确认成功</h3><p>填写完成之后，点击确认。</p>
+<p><img src="https://syimg.dpdns.org/myimg/d665a2.png" alt="确认"></p>
+<p>确认之后，如果出现下图，即为成功。</p>
+<p><img src="https://syimg.dpdns.org/myimg/993534.png" alt="成功"></p>
+<h3 id="3-7-失败处理"><a href="#3-7-失败处理" class="headerlink" title="3.7 失败处理"></a>3.7 失败处理</h3><p>如果不能通过，请切换卡号再次尝试。</p>
+<h2 id="4-声明"><a href="#4-声明" class="headerlink" title="4. 声明"></a>4. 声明</h2><p><strong>此教程仅供学习交流。</strong></p>
+<p><strong>在某种意义上，尝试使用随机生成的信用卡信息进行绑定或交易属于非法行为，可能会导致法律后果，包括被网站禁止、面临欺诈指控等。因此如非必要，即便在技术上可能存在这样的漏洞，也强烈建议遵守法律和道德规范，不要尝试使用非法手段进行操作。</strong></p>
+<p><strong>在某种意义上，尝试使用随机生成的信用卡信息进行绑定或交易属于非法行为，可能会导致法律后果，包括被网站禁止、面临欺诈指控等。因此如非必要，即便在技术上可能存在这样的漏洞，也强烈建议遵守法律和道德规范，不要尝试使用非法手段进行操作。</strong></p>
+<p><strong>在某种意义上，尝试使用随机生成的信用卡信息进行绑定或交易属于非法行为，可能会导致法律后果，包括被网站禁止、面临欺诈指控等。因此如非必要，即便在技术上可能存在这样的漏洞，也强烈建议遵守法律和道德规范，不要尝试使用非法手段进行操作。</strong></p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Cloudflare</tag>
+        <tag>CF</tag>
+        <tag>R2</tag>
+        <tag>免银行卡</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>申请ASU(亚利桑那州立大学)教育邮箱</title>
     <url>/posts/e560/</url>
     <content><![CDATA[<h2 id="0-序"><a href="#0-序" class="headerlink" title="0. 序"></a>0. 序</h2><p>教育邮箱可以申请的优惠很多（如Notion的学生优惠），请自行探索相关内容。</p>
-<p><a href="">原教程</a></p>
 <h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>一个<a href="https://fauxid.com/">美国身份生成网站</a>，<strong>注意保存好基本信息，之后收到激活邮件需要使用</strong>；</p>
 <p>一个可以接受信件电子邮箱（推荐gmail、outlook）</p>
 <h2 id="1-申请"><a href="#1-申请" class="headerlink" title="1. 申请"></a>1. 申请</h2><h3 id="1-1-生成身份信息"><a href="#1-1-生成身份信息" class="headerlink" title="1.1 生成身份信息"></a>1.1 生成身份信息</h3><p>打开<a href="https://fauxid.com/">美国身份生成网站</a>，进行身份信息筛选</p>
@@ -109,7 +108,7 @@
 <td>男女均可</td>
 <td align="left">18 to 24</td>
 <td>美国 United States</td>
-<td>Alaska、California、New Jersey、Arizona随便一个</td>
+<td>Alaska、California、New Jersey随便一个</td>
 </tr>
 </tbody></table>
 <p>注意：出生日期的年最好是2004、2005、2006；种族白人White（生成后下拉页面查看）</p>
@@ -143,8 +142,20 @@
 <p><img src="https://syimg.dpdns.org/myimg/2fc240.png" alt="6"></p>
 <p>成功，等待激活邮件，我的是第二天就发了激活邮件，有ASU Account Activation字样。</p>
 <p><img src="https://syimg.dpdns.org/myimg/4d9c09.png" alt="7"></p>
-<h2 id="2-激活"><a href="#2-激活" class="headerlink" title="2. 激活"></a>2. 激活</h2><p>明天写……</p>
-<h2 id="3-使用"><a href="#3-使用" class="headerlink" title="3. 使用"></a>3. 使用</h2><p>可以用于Notion学生优惠，下载文献等，请自行探索相关内容。</p>
+<h2 id="2-激活"><a href="#2-激活" class="headerlink" title="2. 激活"></a>2. 激活</h2><p>收到激活邮件后，点击邮件中的链接进行激活。</p>
+<p>同意协议</p>
+<p><img src="https://syimg.dpdns.org/myimg/0a3053.png" alt="8"></p>
+<p>信息填写</p>
+<p><img src="https://syimg.dpdns.org/myimg/e6f876.png" alt="9"></p>
+<p>设置密码</p>
+<p><img src="https://syimg.dpdns.org/myimg/dda935.png" alt="10"></p>
+<p><img src="https://syimg.dpdns.org/myimg/e1bb78.png" alt="11"></p>
+<p>添加电子邮箱并验证</p>
+<p><img src="https://syimg.dpdns.org/myimg/802ffd.png" alt="12"></p>
+<p><img src="https://syimg.dpdns.org/myimg/7fd8df.png" alt="13"></p>
+<p>成功</p>
+<p><img src="https://syimg.dpdns.org/myimg/ab7871.png" alt="14"></p>
+<h2 id="3-使用"><a href="#3-使用" class="headerlink" title="3. 使用"></a>3. 使用</h2><p>可以用于Notion学生优惠等，请自行探索相关内容。</p>
 ]]></content>
       <categories>
         <category>教程</category>
